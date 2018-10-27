@@ -1,0 +1,31 @@
+﻿<div class="dropdown edit">
+    <a class="dropdown-toggle icon-pencil"
+       data-toggle="dropdown"
+       href="#" style="font-style: italic"></a>
+    <ul class="dropdown-menu">
+        <!-- Add -->
+        <li>
+            <a asp-action="@("Create" + ViewBag.type)" asp-controller="Home">
+                <i class="icon-plus"></i>
+                Создать
+            </a>
+        </li>
+        <li class="divider">
+        </li>
+        <!-- Edit -->
+        <li>
+            <a asp-action="@("Edit" + ViewBag.type)" asp-controller="Home" asp-route-id="@ViewBag.type_id">
+                <i class="icon-pencil"></i>
+                Изменить
+            </a>
+        </li>
+        <li class="divider">
+        </li><!-- Remove-->
+        <li>
+            <a class="danger" asp-action="@("Delete" + ViewBag.type)" asp-controller="Home" asp-route-id="@ViewBag.type_id">
+                <i class="icon-remove"></i>
+                Удалить
+            </a>
+        </li>
+    </ul>
+</div>

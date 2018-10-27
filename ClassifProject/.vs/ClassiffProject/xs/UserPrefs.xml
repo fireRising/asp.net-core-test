@@ -1,0 +1,37 @@
+﻿<Properties StartupConfiguration="{610A63E2-CA32-4B7A-8553-63322B67AC63}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+    <Files>
+      <File FileName="appsettings.json" Line="11" Column="2" />
+      <File FileName="Startup.cs" Line="20" Column="6" />
+      <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" Line="1" Column="1" />
+      <File FileName="Data/Migrations/00000000000000_CreateIdentitySchema.cs" Line="44" Column="38" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="8" Column="40" />
+      <File FileName="Views/_ViewImports.cshtml" Line="1" Column="16" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ClassiffProject" expanded="True">
+            <Node name="ClassifProject" expanded="True">
+              <Node name="Dependencies" expanded="True">
+                <Node name="PackageDependencies" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Shared" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.ClassifProject PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

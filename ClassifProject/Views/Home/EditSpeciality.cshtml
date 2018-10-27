@@ -1,0 +1,34 @@
+﻿@model ClassifProject.Models.Specialties
+@{
+    ViewData["Title"] = "Edit Speciality";
+}
+
+<form asp-action="EditSpeciality" asp-controller="Home" asp-route-id="@Model.id_spec">
+    <div class="form-group">
+        <label asp-for="id_spec" class="control-label">Id</label>
+        <input type="text" asp-for="id_spec" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="code_spec" class="control-label">Code spec</label>
+        <input type="text" asp-for="code_spec" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="name_spec" class="control-label">Name</label>
+        <input type="text" asp-for="name_spec" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="id_engr" class="control-label">Id Enlarged Group</label>
+        <input type="text" asp-for="id_engr" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="id_class" class="control-label">Id Classifier</label>
+        <input type="text" asp-for="id_class" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="id_edulvl" class="control-label">Id Education Level</label>
+        <input type="text" asp-for="id_edulvl" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Send" class="btn btn-default" />
+    </div>
+</form>

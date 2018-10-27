@@ -1,0 +1,36 @@
+﻿@model ClassifProject.Models.Specialties
+@{
+    ViewData["Title"] = "Delete Speciality";
+}
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Code spec</th>
+                <th scope="col">Name spec</th>
+                <th scope="col">Id Enlarged Group</th>
+                <th scope="col">Id classifier</th>
+                <th scope="col">Id Education Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td scope="row">@Model.id_spec</td>
+                <td>@Model.code_spec</td>
+                <td>@Model.name_spec</td>
+                <td>@Model.id_engr</td>
+                <td>@Model.id_class</td>
+                <td>@Model.id_edulvl</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <form asp-controller="Home" asp-action="DeleteSpeciality" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>

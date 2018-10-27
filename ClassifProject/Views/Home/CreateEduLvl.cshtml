@@ -1,0 +1,21 @@
+﻿@model ClassifProject.Models.EducationLevel
+@{
+    ViewData["Title"] = "Create Education Level";
+}
+<form asp-action="CreateEduLvl" asp-controller="Home">
+    <div class="form-group">
+        <label asp-for="id_edulvl" class="control-label">Id</label>
+        <input type="text" asp-for="id_edulvl" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="code_edulvl" class="control-label">Код уровня образования</label>
+        <input type="text" asp-for="code_edulvl" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="name_edulvl" class="control-label">Имя уровня образования</label>
+        <input type="text" asp-for="name_edulvl" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Send" class="btn btn-default" />
+    </div>
+</form>

@@ -1,0 +1,29 @@
+﻿@model ClassifProject.Models.EnlargedGroups
+@{
+    ViewData["Title"] = "Delete Enlarged Group";
+}
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Id classifier</th>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">@Model.id_engr</th>
+                <th>@Model.id_class</th>
+                <td>@Model.name_engr</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <form asp-controller="Home" asp-action="DeleteEnlGroup" method="post">
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Удалить" />
+            </div>
+        </form>
+    </div>
+</div>

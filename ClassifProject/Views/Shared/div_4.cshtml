@@ -1,0 +1,40 @@
+﻿
+<div class="accordion-body collapse" id="@string.Format("servicop{0}_{1}_{2}_{3}", @ViewBag.id,
+                                        @ViewBag.id_div_3, 
+                                        @ViewBag.id_div_3_2, 
+                                        @ViewBag.id_div_4)">
+
+    <div class="accordion-inner">
+        <link rel="stylesheet" href="~/css/table_in_table.css" type="text/css" />
+        <div class="table-responsive table-bordered movie-table">
+            <table class="table movie-table">
+                <thead>
+                    <tr class="movie-table-head">
+                        <th>Id_Spec</th>
+                        <th>Code Spec</th>
+                        <th>Name Spec</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item4 in ((IEnumerable<dynamic>)Model.Specialties).Where(c => c.id_engr == @ViewBag.item4_id_engr)
+                                                                                    .Where(c => c.id_class == @ViewBag.id_class)
+                                                                                    .Where(c => c.id_edulvl == @ViewBag.id_edulvl))
+                    {
+
+                    <tr class="dark-row">
+                        <td>@item4.id_spec</td>
+                        <td>@item4.code_spec</td>
+                        <td>@item4.name_spec</td>
+                        <td>
+                            @await Html.PartialAsync("MenuChangeEditDelete", new ViewDataDictionary(ViewData) { { "type", "Speciality" }, { "type_id", @item4.id_spec } })
+                        </td>
+                    </tr>
+
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><!-- /Servicos -->

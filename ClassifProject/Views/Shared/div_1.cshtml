@@ -1,0 +1,33 @@
+﻿@{ 
+    int i2 = 1;
+}
+<div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="menu">
+                <div class="accordion">
+                    <!-- Areas -->
+                    <div class="accordion-group">
+                        <!-- Area -->
+                        <div class="accordion-heading area">
+                            <a class="accordion-toggle" data-toggle="collapse" href="@string.Format("#area{0}", @ViewBag.id)">@ViewBag.name_class</a>
+
+                            @await Html.PartialAsync("MenuChangeEditDelete", new ViewDataDictionary(ViewData) { { "type", "Classifier" }, { "type_id", @ViewBag.id_class } })
+
+                        </div><!-- /Area -->
+                        <div class="accordion-body collapse" id="@string.Format("area{0}", @ViewBag.id)">
+                            <div class="accordion-inner">
+                                @foreach (var edulvl in Model.EducationLevels)
+                                {
+                                    @await Html.PartialAsync("div_2", new ViewDataDictionary(ViewData) { { "id_div_2", i2 },
+                                   {"name_edulvl", edulvl.name_edulvl }, {"id_edulvl", edulvl.id_edulvl } })
+                                    i2++;
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

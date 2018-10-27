@@ -1,0 +1,17 @@
+﻿@{ 
+    int i3_2 = 1;
+}
+
+<div class="accordion-body collapse" id="@string.Format("ponto{0}_{1}", @ViewBag.id, @ViewBag.id_div_3)">
+    <div class="accordion-inner">
+
+
+        @foreach (var item in ((IEnumerable<dynamic>)Model.EnlargedGroups).Where(c => c.id_class == @ViewBag.id_class))
+        {
+            @await Html.PartialAsync("div_3_2", new ViewDataDictionary(ViewData) { { "id_div_3_2", i3_2 },
+           { "EnlGroup", item.name_engr}, {"item4_id_engr", item.id_engr }});
+            i3_2++;
+        }
+
+    </div>
+</div><!-- /Pontos -->
